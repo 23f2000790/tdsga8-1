@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Q3 Quarterly Earnings - Technical Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h2>Q3 Earnings Report</h2>
+                <h3>Financial Technology Division</h3>
+                <p>
+                    <small>Prepared by Technical Consultant</small><br>
+                    <a href="mailto:23f2000790@ds.study.iitm.ac.in">23f2000790@ds.study.iitm.ac.in</a>
+                </p>
+                
+                <aside class="notes">
+                    Welcome stakeholders. Today we will review the Q3 performance metrics. 
+                    Introduce yourself and mention the email provided for follow-up technical queries.
+                </aside>
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
+                    
+                    *Current Market Position*
+
+                    > "Technology adoption has driven a 15% increase in operational efficiency."
+
+                    * **Revenue:** Exceeded targets by 5%
+                    * **Tech Debt:** Reduced by 12%
+                    * **User Acquisition:** Stable
+                </textarea>
+                <aside class="notes">
+                    This slide is rendered using Markdown. Highlight the quote regarding efficiency.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Key Growth Drivers</h3>
+                <p>Our strategy focused on three pillars:</p>
+                <ul>
+                    <li class="fragment">Cloud Infrastructure Migration</li>
+                    <li class="fragment">AI-Driven Risk Assessment</li>
+                    <li class="fragment">Automated Compliance Reporting</li>
+                </ul>
+                <p class="fragment fade-up" style="color: #42affa; margin-top: 20px;">
+                    Result: 20% Reduction in Latency
+                </p>
+                <aside class="notes">
+                    Click through to reveal each point. Emphasize the final result in blue.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Financial Modeling</h3>
+                <p>We utilized the Black-Scholes model for our derivatives pricing update:</p>
+                
+                $$
+                C = S_0 N(d_1) - K e^{-rT} N(d_2)
+                $$
+
+                <p style="font-size: 0.6em;">Where:</p>
+                $$ d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma \sqrt{T}} $$
+                
+                <aside class="notes">
+                    Explain the variables: S0 is current stock price, K is strike price. 
+                    Demonstrates MathJax rendering capabilities.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Algorithmic Efficiency</h3>
+                <p>Optimized Python implementation for the projected earnings calculator:</p>
+                
+                <pre><code class="python" data-trim data-noescape>
+def calculate_compound_growth(principal, rate, years):
+    """
+    Calculates future value based on fixed rate
+    """
+    if years < 0:
+        raise ValueError("Time cannot be negative")
+        
+    future_value = principal * (1 + rate) ** years
+    return round(future_value, 2)
+
+# Q3 Projection
+result = calculate_compound_growth(1000000, 0.05, 1)
+print(f"Projected: ${result}")
+                </code></pre>
+                <aside class="notes">
+                    Walk through the code snippet. Note the syntax highlighting on the keywords like 'def' and 'return'.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/math/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/notes/notes.min.js"></script>
+
+    <script>
+        // Initialize Reveal
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
+        });
+    </script>
+</body>
+</html>
